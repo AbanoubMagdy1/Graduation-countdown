@@ -3,7 +3,10 @@ const hours = document.querySelector('#hours');
 const minutes = document.querySelector('#minutes');
 const seconds = document.querySelector('#seconds');
 
-Notification.requestPermission()
+const counters = document.querySelector('.counters');
+const graduated = document.querySelector('h3');
+
+/*Notification.requestPermission()*/
 
 function transformDateToSeconds(date) {
     return Math.floor(date.getTime() / 1000);
@@ -20,6 +23,12 @@ function countdown() {
     const now = transformDateToSeconds(new Date());
     let difference = graduationDateSeconds - now;
 
+    if (difference <= 0) {
+        counters.style.display = 'none';
+        graduated.style.display = 'block';
+        return
+    }
+
     const daysLeft = Math.floor(difference / 86400);
     difference -= daysLeft * 86400;
     days.textContent = padToTwo(daysLeft);
@@ -35,12 +44,12 @@ function countdown() {
     const secondsLeft = difference % 60;
     seconds.textContent = padToTwo(secondsLeft);
 
-    if(secondsLeft == 0){
+    /*if(secondsLeft == 0){
         new Notification(`${daysLeft} يوم`, {
             body: `فاضلك ${daysLeft} وتتخرج يا جميل`,
             icon: './icon.svg'
-        })
-    }
+         })
+    }*/
 }
 
 setInterval(countdown, 1000);

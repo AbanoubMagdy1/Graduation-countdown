@@ -1,4 +1,5 @@
-const addBtn = document.querySelector("#addToHome")
+const addBtn = document.querySelector("#addToHome");
+const close = addBtn.querySelector("span");
 
 let addHomeEvent;
 
@@ -27,3 +28,8 @@ addBtn.addEventListener("click", function(){
         addHomeEvent = null;
     });
 }, {once: true});
+
+close.addEventListener("click", function(evt){
+    evt.stopPropagation();
+    addBtn.classList.remove("show");
+})
