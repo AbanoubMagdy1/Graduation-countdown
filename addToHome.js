@@ -19,6 +19,7 @@ addBtn.addEventListener("click", function(){
     addHomeEvent.prompt();
     addHomeEvent.userChoice.then(function(choiceResult) {
         if (choiceResult.outcome === 'accepted') {
+            addBtn.classList.remove("show");
             console.log('User accepted the Add to Home screen prompt');
         } else {
             console.log('User dismissed the Add to Home screen prompt');
