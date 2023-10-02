@@ -6,6 +6,7 @@
     <meta name="description" content="Graduation countdown of KafrElsheikh faculty of medicine 2023">
     <meta name="keywords" content="Graduation, countdown, faculty of medicine, 2023">
     <meta name="author" content="Abanoub Magdy">
+    <link rel="manifest" href="manifest.json">
     <link rel="stylesheet" href="style.css">
     <title>Graduation Countdown</title>
 </head>
@@ -31,6 +32,13 @@
             </div>
         </div>
     </main>
+    <button id="addToHome" type="button">Add to home screen</button>
+    <script>
+        if('serviceWorker' in navigator){
+            navigator.serviceWorker.register('sw.js')
+        }
+    </script>
+    <script src="addToHome.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

@@ -59,6 +59,21 @@ h1{
     letter-spacing: 10px;
 }
 
+#addToHome{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    padding-block: 1rem;
+    font-size: 1.8rem;
+    display: none;
+}
+
+#addToHome.show{
+    display: block;
+}
+
 @media (max-width: 700px){
     html{
         font-size: 12px;
