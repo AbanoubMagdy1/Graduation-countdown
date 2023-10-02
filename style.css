@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Pacifico&family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./graduationPhoto.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: min(1000px, 95%);
+    margin-block: 2rem;
+}
+
+h1{
+    font-family: 'Pacifico', cursive, sans-serif;
+    text-align: center;
+    font-size: 3rem;
+    color: white;
+    margin-bottom: 2rem;
+}
+
+.counters{
+    font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+.counters .counter{
+    background-color: rgba(255, 105, 105, .5);
+    padding: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    width: 13rem;
+}
+
+.counters .counter h2{
+    color: #222831;
+    margin-bottom: .5rem;
+}
+
+.counters .counter div{
+    font-size: 3rem;
+    letter-spacing: 10px;
+}
+
+@media (max-width: 700px){
+    html{
+        font-size: 12px;
+    }
+    .counters{
+        gap: 1rem;
+    }
+}
