@@ -3,6 +3,8 @@ const hours = document.querySelector('#hours');
 const minutes = document.querySelector('#minutes');
 const seconds = document.querySelector('#seconds');
 
+Notification.requestPermission()
+
 function transformDateToSeconds(date) {
     return Math.floor(date.getTime() / 1000);
 }
@@ -32,6 +34,13 @@ function countdown() {
 
     const secondsLeft = difference % 60;
     seconds.textContent = padToTwo(secondsLeft);
+
+    if(secondsLeft == 0){
+        new Notification(`${daysLeft} يوم`, {
+            body: `فاضلك ${daysLeft} وتتخرج يا جميل`,
+            icon: './icon.svg'
+        })
+    }
 }
 
 setInterval(countdown, 1000);
