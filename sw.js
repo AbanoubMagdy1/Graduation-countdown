@@ -2,7 +2,6 @@ const cacheName = 'sw-cache-v1';
 
 const filesToCache = [
     '/',
-    'index.html',
     'style.css',
     'script.js',
     'graduationPhoto.jpg',
@@ -11,7 +10,7 @@ const filesToCache = [
 self.addEventListener('install', function(event) {
     event.waitUntil( async function() {
         const cache = await caches.open(cacheName);
-        await cache.addAll(filesToCache);
+        return cache.addAll(filesToCache);
     })
 })
 
