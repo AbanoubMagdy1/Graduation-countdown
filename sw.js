@@ -1,6 +1,7 @@
 const cacheName = 'sw-cache-v1';
 
 const filesToCache = [
+    '/Graduation-countdown/',
     '/Graduation-countdown/index.html',
     '/Graduation-countdown/style.css',
     '/Graduation-countdown/script.js',
