@@ -1,10 +1,10 @@
 const cacheName = 'sw-cache-v1';
 
 const filesToCache = [
-    '/',
-    'style.css',
-    'script.js',
-    'graduationPhoto.jpg',
+    '/Graduation-countdown/index.html',
+    '/Graduation-countdown/style.css',
+    '/Graduation-countdown/script.js',
+    '/Graduation-countdown/graduationPhoto.jpg',
 ]
 
 self.addEventListener('install', function(event) {

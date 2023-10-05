@@ -37,7 +37,7 @@
     <button id="addToHome" type="button">Add to home screen<span>X</span></button>
     <script>
         if('serviceWorker' in navigator){
-            navigator.serviceWorker.register('sw.js')
+            navigator.serviceWorker.register('/Graduation-countdown/sw.js', {scope: '/{repository}/'})
         }
     </script>
     <script src="addToHome.js"></script>
